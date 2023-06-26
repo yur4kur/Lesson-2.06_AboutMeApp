@@ -54,7 +54,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6eL-EZ-2WA">
                                         <rect key="frame" x="0.0" y="0.0" width="129" height="29"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Forgot login?" titleAlignment="leading">
+                                        <buttonConfiguration key="configuration" style="plain" title="Forgot your login?" titleAlignment="leading">
                                             <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="13"/>
                                             <color key="baseForegroundColor" red="0.58830432190000004" green="0.64476521549999999" blue="0.91591566800000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
@@ -69,12 +69,22 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZOt-aS-z8q">
-                                <rect key="frame" x="110" y="414" width="84" height="42"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZOt-aS-z8q">
+                                <rect key="frame" x="110" y="414" width="100" height="42"/>
                                 <color key="backgroundColor" red="0.41886626470822885" green="0.41049601399587365" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="HRN-7e-dFk"/>
+                                    <constraint firstAttribute="height" constant="42" id="YZk-CL-qJK"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Login"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -83,19 +93,21 @@
                             <constraint firstItem="LuK-53-fcW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8Vg-8y-rfQ"/>
                             <constraint firstItem="LuK-53-fcW" firstAttribute="top" secondItem="H3h-ct-wEr" secondAttribute="bottom" constant="30" id="9if-wt-Fzh"/>
                             <constraint firstAttribute="trailing" secondItem="6ob-zS-0jW" secondAttribute="trailing" constant="16" id="AJd-Ls-Zj9"/>
-                            <constraint firstItem="ZOt-aS-z8q" firstAttribute="centerX" secondItem="6ob-zS-0jW" secondAttribute="centerX" constant="-8" id="BhV-hd-LJ3"/>
                             <constraint firstItem="6SE-Yf-ofa" firstAttribute="top" secondItem="LuK-53-fcW" secondAttribute="bottom" constant="30" id="Br3-2m-y6t"/>
                             <constraint firstItem="6SE-Yf-ofa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="MfB-zG-3Uj"/>
                             <constraint firstItem="H3h-ct-wEr" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="36:71" id="STU-2Y-dzA"/>
                             <constraint firstItem="ZOt-aS-z8q" firstAttribute="top" secondItem="6SE-Yf-ofa" secondAttribute="bottom" constant="25" id="Z7h-cr-xWL"/>
                             <constraint firstItem="H3h-ct-wEr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZVu-QU-PRX"/>
-                            <constraint firstItem="ZOt-aS-z8q" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="25:142" constant="-16" id="bFT-mH-kw9"/>
                             <constraint firstItem="6ob-zS-0jW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="dVt-rR-x49"/>
                             <constraint firstItem="H3h-ct-wEr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="jqQ-z8-Agi"/>
                             <constraint firstItem="6ob-zS-0jW" firstAttribute="top" secondItem="ZOt-aS-z8q" secondAttribute="bottom" constant="25" id="lT6-JH-7ni"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6SE-Yf-ofa" secondAttribute="trailing" constant="16" id="m1y-vi-jgK"/>
+                            <constraint firstItem="ZOt-aS-z8q" firstAttribute="centerX" secondItem="6ob-zS-0jW" secondAttribute="centerX" id="wgx-gu-EO3"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loginButton" destination="8bC-Xf-vdC" id="iKE-eS-XsT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
