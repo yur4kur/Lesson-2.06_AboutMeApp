@@ -35,7 +35,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="46c-l6-nhy" kind="presentation" modalPresentationStyle="fullScreen" id="97O-VM-aR4"/>
+                                    <segue destination="46c-l6-nhy" kind="presentation" modalPresentationStyle="fullScreen" id="OeK-HX-M9a"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="840-OW-8B7">
@@ -59,7 +59,7 @@
                                                 <color key="backgroundColor" red="0.41161810538681309" green="0.4114379992233872" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" textContentType="username"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done" enablesReturnKeyAutomatically="YES" textContentType="username"/>
                                             </textField>
                                         </subviews>
                                     </stackView>

@@ -15,7 +15,7 @@ class LoginViewController: UIViewController {
     
     // MARK: Private properties
     private var login = "Jane"
-    private var password = "Sensei"
+    private var password = "sensei"
     
     // MARK: Override methods
     override func viewDidLoad() {
@@ -24,8 +24,25 @@ class LoginViewController: UIViewController {
         passwordTextfield.delegate = self
     }
     
+    override func touchesBegan(
+        _ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        self.view.endEditing(false)
+    }
     
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if loginTextfield.text == login && passwordTextfield.text == password {
+            return true
+        } else {
+            showAlert(title: "Ooops!", message: "Error in login or password")
+            return false
+        }
+    }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
+            welcomeVC.name = "\(login)"
+    }
     
     // MARK: IBActions
     @IBAction func forgotLoginButtonDidTap() {
@@ -37,16 +54,11 @@ class LoginViewController: UIViewController {
     }
 }
 
-// MARK: Extensions
+    // MARK: Extensions
 extension LoginViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesBegan(touches, with: event)
-        self.view.endEditing(false)
     }
 }
 
