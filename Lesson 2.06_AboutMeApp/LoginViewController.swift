@@ -24,8 +24,7 @@ class LoginViewController: UIViewController {
         passwordTextfield.delegate = self
     }
     
-    override func touchesBegan(
-        _ touches: Set<UITouch>, with event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         self.view.endEditing(false)
     }
