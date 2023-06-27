@@ -52,6 +52,11 @@ class LoginViewController: UIViewController {
     @IBAction func forgotPasswordButtonDidTap() {
         showAlert(title: "Ooops!", message: "Your password is '\(password)'")
     }
+    
+    @IBAction func unwindAction(for unwindSegue: UIStoryboardSegue) {
+        self.loginTextfield.text?.removeAll()
+        self.passwordTextfield.text?.removeAll()
+    }
 }
 
     // MARK: Extensions

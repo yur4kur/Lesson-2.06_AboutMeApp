@@ -147,6 +147,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="logoutButtonDidTap" destination="46c-l6-nhy" eventType="touchUpInside" id="a30-jP-0Xc"/>
+                                    <segue destination="fER-WT-jxE" kind="unwind" unwindAction="unwindActionFor:" id="zen-bM-Ije"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Welcome" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2du-XA-ooE">
@@ -174,6 +175,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1ji-LW-sxn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="fER-WT-jxE" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="849.375" y="-2.112676056338028"/>
         </scene>
