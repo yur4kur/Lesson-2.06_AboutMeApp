@@ -35,7 +35,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="46c-l6-nhy" kind="presentation" modalPresentationStyle="fullScreen" id="OeK-HX-M9a"/>
+                                    <segue destination="46c-l6-nhy" kind="presentation" identifier="welcomSegue" modalPresentationStyle="fullScreen" id="OeK-HX-M9a"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="840-OW-8B7">
@@ -147,7 +147,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="logoutButtonDidTap" destination="46c-l6-nhy" eventType="touchUpInside" id="a30-jP-0Xc"/>
                                     <segue destination="fER-WT-jxE" kind="unwind" unwindAction="unwindActionFor:" id="zen-bM-Ije"/>
                                 </connections>
                             </button>

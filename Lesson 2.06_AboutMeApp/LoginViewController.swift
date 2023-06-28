@@ -26,7 +26,7 @@ class LoginViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
-        self.view.endEditing(false)
+        view.endEditing(false)
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
@@ -44,7 +44,7 @@ class LoginViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-            welcomeVC.name = "\(login)"
+            welcomeVC.name = login
     }
     
     // MARK: IBActions
@@ -57,15 +57,19 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func unwindAction(for unwindSegue: UIStoryboardSegue) {
-        self.loginTextfield.text?.removeAll()
-        self.passwordTextfield.text?.removeAll()
+        loginTextfield.text?.removeAll()
+        passwordTextfield.text?.removeAll()
     }
 }
 
     // MARK: Extensions
 extension LoginViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
+        if textField == loginTextfield {
+            passwordTextfield.becomeFirstResponder()
+        } else {
+            textField.resignFirstResponder()
+        }
         return true
     }
 }
