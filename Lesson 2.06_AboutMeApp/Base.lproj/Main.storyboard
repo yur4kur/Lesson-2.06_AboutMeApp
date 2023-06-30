@@ -35,7 +35,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="46c-l6-nhy" kind="presentation" modalPresentationStyle="fullScreen" id="Ph6-z5-4fg"/>
+                                    <segue destination="hY2-SA-WSg" kind="presentation" modalPresentationStyle="fullScreen" id="Ph6-z5-4fg"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="840-OW-8B7">
@@ -125,39 +125,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, User!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mmV-xP-mIP">
-                                <rect key="frame" x="46" y="60" width="228" height="41"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <rect key="frame" x="65.5" y="60" width="189" height="33.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <color key="textColor" systemColor="systemBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Welcome" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2du-XA-ooE">
-                                <rect key="frame" x="-62" y="126" width="444" height="180.5"/>
+                                <rect key="frame" x="-62" y="118.5" width="444" height="180.5"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="YSR-ZI-lCJ">
-                                <rect key="frame" x="100" y="430" width="120" height="88"/>
+                                <rect key="frame" x="100" y="433" width="120" height="36"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ht3-dQ-J7z">
-                                        <rect key="frame" x="0.0" y="0.0" width="120" height="36"/>
-                                        <color key="backgroundColor" red="0.41886626469999999" green="0.41049601400000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="NlU-S2-ygS"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Get Info">
-                                            <color key="titleColor" systemColor="systemBackgroundColor"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="8"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <segue destination="9rB-kZ-cJR" kind="presentation" modalPresentationStyle="fullScreen" id="Bvr-9S-9zG"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NhV-bd-Dc8">
-                                        <rect key="frame" x="0.0" y="52" width="120" height="36"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="36"/>
                                         <color key="backgroundColor" red="0.41886626470822885" green="0.41049601399587365" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="VpM-UW-KY5"/>
@@ -178,9 +158,9 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ready to get student info?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C8k-Rf-C2a">
-                                <rect key="frame" x="3" y="351.5" width="314" height="33.5"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Another student file is ready!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C8k-Rf-C2a">
+                                <rect key="frame" x="24" y="344" width="272" height="26.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -209,9 +189,9 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1ji-LW-sxn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="fER-WT-jxE" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="784" y="-2"/>
+            <point key="canvasLocation" x="1731" y="-2"/>
         </scene>
-        <!--Personal file-->
+        <!--Personal info-->
         <scene sceneID="iGu-JB-7N8">
             <objects>
                 <viewController id="5AY-XR-Aip" customClass="PersonalViewController" customModule="Lesson_2_06_AboutMeApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -308,7 +288,7 @@
                             <constraint firstItem="4ca-2X-EeJ" firstAttribute="centerX" secondItem="Frj-gQ-hG6" secondAttribute="centerX" id="on2-D5-g10"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Personal file" image="filemenu.and.selection" catalog="system" id="Vg8-LU-3MN"/>
+                    <tabBarItem key="tabBarItem" title="Personal info" image="filemenu.and.selection" catalog="system" id="Vg8-LU-3MN"/>
                     <navigationItem key="navigationItem" id="e4I-bW-zJG"/>
                     <connections>
                         <outlet property="personalImage" destination="4ca-2X-EeJ" id="eEJ-5J-aP7"/>
@@ -316,7 +296,36 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0EP-kR-scp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2398" y="-682"/>
+            <point key="canvasLocation" x="1731" y="-699"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="YLI-DP-MWN">
+            <objects>
+                <viewController id="voI-kZ-kwz" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Q1y-7T-jQO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SwiftEducation" translatesAutoresizingMaskIntoConstraints="NO" id="ybK-kg-twE">
+                                <rect key="frame" x="40" y="60" width="240" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="Dl4-pr-Uoz"/>
+                                    <constraint firstAttribute="width" constant="240" id="UJx-di-ZKb"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Vbu-d4-ZU8"/>
+                        <color key="backgroundColor" systemColor="systemMintColor"/>
+                        <constraints>
+                            <constraint firstItem="ybK-kg-twE" firstAttribute="centerX" secondItem="Q1y-7T-jQO" secondAttribute="centerX" id="FBd-1I-294"/>
+                            <constraint firstItem="ybK-kg-twE" firstAttribute="top" secondItem="Vbu-d4-ZU8" secondAttribute="top" constant="16" id="dyt-du-boi"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="DLj-s8-wus"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rjK-Gm-9EJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4140" y="10"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="sju-3c-z1c">
@@ -325,34 +334,34 @@
                     <view key="view" contentMode="scaleToFill" id="afx-HX-h4i">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Education" translatesAutoresizingMaskIntoConstraints="NO" id="kTl-tE-OTD">
+                                <rect key="frame" x="40" y="60" width="240" height="190"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="190" id="4Mq-AA-7SS"/>
+                                    <constraint firstAttribute="width" constant="240" id="p7d-tL-BB4"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="UsZ-3m-WWQ"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemMintColor"/>
+                        <constraints>
+                            <constraint firstItem="kTl-tE-OTD" firstAttribute="centerX" secondItem="afx-HX-h4i" secondAttribute="centerX" id="muk-oF-obz"/>
+                            <constraint firstItem="kTl-tE-OTD" firstAttribute="top" secondItem="UsZ-3m-WWQ" secondAttribute="top" constant="16" id="wPr-sr-cYl"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="RbS-65-Ilu"/>
+                    <navigationItem key="navigationItem" id="RbS-65-Ilu">
+                        <barButtonItem key="rightBarButtonItem" title="Swift" id="aut-E7-wIo">
+                            <color key="tintColor" systemColor="tintColor"/>
+                            <connections>
+                                <segue destination="voI-kZ-kwz" kind="show" id="mdE-MQ-KaG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EQN-K2-DHI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3165" y="-2"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="FrY-5s-3nA">
-            <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="9rB-kZ-cJR" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="vHR-mf-fhM">
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="5AY-XR-Aip" kind="relationship" relationship="viewControllers" id="9Xq-Xe-hor"/>
-                        <segue destination="oS0-3G-awh" kind="relationship" relationship="viewControllers" id="e0A-Ub-4hT"/>
-                        <segue destination="4Vh-6A-qcV" kind="relationship" relationship="viewControllers" id="CNe-V6-zpb"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HEk-XM-Nnz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1586" y="-2"/>
+            <point key="canvasLocation" x="3323" y="10"/>
         </scene>
         <!--Education-->
         <scene sceneID="6Tl-jj-mYo">
@@ -371,7 +380,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PXd-uX-wRJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2396" y="-2"/>
+            <point key="canvasLocation" x="2520" y="10"/>
         </scene>
         <!--Career-->
         <scene sceneID="URI-bd-R92">
@@ -380,19 +389,56 @@
                     <view key="view" contentMode="scaleToFill" id="jva-EQ-Jfj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Career" translatesAutoresizingMaskIntoConstraints="NO" id="F63-5E-nzh">
+                                <rect key="frame" x="84" y="63" width="152" height="218"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="218" id="3ML-bI-GQi"/>
+                                    <constraint firstAttribute="width" constant="152" id="Pom-dH-HyU"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="94U-Zg-BND"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        <constraints>
+                            <constraint firstItem="F63-5E-nzh" firstAttribute="top" secondItem="94U-Zg-BND" secondAttribute="top" constant="63" id="aMS-Zu-129"/>
+                            <constraint firstItem="F63-5E-nzh" firstAttribute="centerX" secondItem="jva-EQ-Jfj" secondAttribute="centerX" id="iY6-U6-nkN"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Career" image="tray.full" catalog="system" id="D6P-9O-773"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lhw-5m-ddD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2394" y="798"/>
+            <point key="canvasLocation" x="1731" y="801"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="KLG-RO-qvR">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="hY2-SA-WSg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="rvp-Mj-yRB">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="46c-l6-nhy" kind="relationship" relationship="viewControllers" id="x4n-BT-353"/>
+                        <segue destination="5AY-XR-Aip" kind="relationship" relationship="viewControllers" id="VGk-11-lDD"/>
+                        <segue destination="oS0-3G-awh" kind="relationship" relationship="viewControllers" id="Mhb-ie-yCc"/>
+                        <segue destination="4Vh-6A-qcV" kind="relationship" relationship="viewControllers" id="C4m-4d-01e"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JoB-g0-BSL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="915" y="-2"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Career" width="1520" height="2182"/>
         <image name="Dreaming" width="2624" height="2086"/>
+        <image name="Education" width="975" height="834"/>
         <image name="Personal" width="640" height="640"/>
+        <image name="SwiftEducation" width="660" height="440"/>
         <image name="Welcome" width="428" height="367"/>
         <image name="filemenu.and.selection" catalog="system" width="128" height="93"/>
         <image name="graduationcap" catalog="system" width="128" height="107"/>
@@ -403,6 +449,12 @@
         </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
