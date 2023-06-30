@@ -30,15 +30,16 @@ class LoginViewController: UIViewController {
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        if !loginTextfield.hasText || !passwordTextfield.hasText {
-            showAlert(title: "Something is missing!", message: "Check your login or password")
-            return false
-        } else if loginTextfield.text == login && passwordTextfield.text == password {
-            return true
-        } else {
-            showAlert(title: "Ooops!", message: "Error in login or password", textField: passwordTextfield)
-            return false
-        }
+//        if !loginTextfield.hasText || !passwordTextfield.hasText {
+//            showAlert(title: "Something is missing!", message: "Check your login or password")
+//            return false
+//        } else if loginTextfield.text == login && passwordTextfield.text == password {
+//            return true
+//        } else {
+//            showAlert(title: "Ooops!", message: "Error in login or password", textField: passwordTextfield)
+//            return false
+//        }
+        return true
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
