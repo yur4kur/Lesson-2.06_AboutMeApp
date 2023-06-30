@@ -14,8 +14,8 @@ class LoginViewController: UIViewController {
     @IBOutlet var passwordTextfield: UITextField!
     
     // MARK: Private properties
-    private var login = "Jane"
-    private var password = "master"
+    private let login = "Jane"
+    private let password = "master"
     
     // MARK: Override methods
     override func viewDidLoad() {
@@ -36,8 +36,7 @@ class LoginViewController: UIViewController {
         } else if loginTextfield.text == login && passwordTextfield.text == password {
             return true
         } else {
-            showAlert(title: "Ooops!", message: "Error in login or password")
-            passwordTextfield.text?.removeAll()
+            showAlert(title: "Ooops!", message: "Error in login or password", textField: passwordTextfield)
             return false
         }
     }
@@ -75,9 +74,11 @@ extension LoginViewController: UITextFieldDelegate {
 }
 
 extension LoginViewController {
-    private func showAlert(title: String, message: String) {
+    private func showAlert(title: String, message: String, textField: UITextField? = nil) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default)
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+            textField?.text?.removeAll()
+        }
         alert.addAction(okAction)
         present(alert, animated: true)
     }
