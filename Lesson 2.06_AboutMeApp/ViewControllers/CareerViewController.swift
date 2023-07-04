@@ -1,13 +1,13 @@
 //
-//  SwiftbookViewController.swift
+//  CareerViewController.swift
 //  Lesson 2.06_AboutMeApp
 //
-//  Created by Юрий Куринной on 30.06.2023.
+//  Created by Юрий Куринной on 04.07.2023.
 //
 
 import UIKit
 
-class SwiftbookViewController: UIViewController {
+class CareerViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
