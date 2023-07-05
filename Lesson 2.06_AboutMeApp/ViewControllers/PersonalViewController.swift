@@ -29,17 +29,5 @@ final class PersonalViewController: UIViewController {
     }
 }
 
-    // MARK: Extensions
-extension UIViewController {
-    func setupLabels(
-        _ titles: [UILabel],
-        _ data: [UILabel],
-        with entries: [Entry]) -> Void {
-        var index = 0
-            entries.forEach { entry in
-                titles[index].text = entry.title.entry
-                data[index].text = entry.description.entry
-                index += 1
-            }
-    }
-}
+    
+
