@@ -9,16 +9,16 @@ import UIKit
 
 final class PersonalViewController: UIViewController {
     
-    //MARK: IBOutlets
+    // MARK: IBOutlets
     @IBOutlet var personalImage: UIImageView!
     
     @IBOutlet var titleLabels: [UILabel]!
     @IBOutlet var dataLabels: [UILabel]!
     
-    //MARK: Private properties
+    // MARK: Private properties
     private let entries = Entry.getPersonalData()
     
-    //MARK: Override methods
+    // MARK: Override methods
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLabels(titleLabels, dataLabels, with: entries)
@@ -29,7 +29,7 @@ final class PersonalViewController: UIViewController {
     }
 }
 
-    //MARK: Extensions
+    // MARK: Extensions
 extension UIViewController {
     func setupLabels(
         _ titles: [UILabel],

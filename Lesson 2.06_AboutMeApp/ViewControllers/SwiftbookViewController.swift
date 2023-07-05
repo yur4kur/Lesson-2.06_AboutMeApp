@@ -11,6 +11,6 @@ class SwiftbookViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        view.addVerticalGradientLayer(topColor: .white, bottomColor: .systemIndigo)
     }
 }

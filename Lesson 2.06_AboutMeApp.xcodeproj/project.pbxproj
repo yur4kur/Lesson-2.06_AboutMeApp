@@ -55,8 +55,8 @@
 				6A6F79622A4998E400D48342 /* LoginViewController.swift */,
 				6AECD2742A4ABA9500D10328 /* WelcomeViewController.swift */,
 				6AECD2762A4ED7FF00D10328 /* PersonalViewController.swift */,
-				6AECD2782A4EED9A00D10328 /* SwiftbookViewController.swift */,
 				6A4A21762A53EDE3007DBCCE /* EducationViewController.swift */,
+				6AECD2782A4EED9A00D10328 /* SwiftbookViewController.swift */,
 				6A4A21782A53EE7C007DBCCE /* CareerViewController.swift */,
 			);
 			path = ViewControllers;

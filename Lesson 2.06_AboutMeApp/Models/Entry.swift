@@ -16,6 +16,15 @@ struct Entry {
             Entry(title: .text("Learning pace:"), description: .text("Slow-to-Average"))
         ]
     }
+    
+    static func getEducationData() -> [Entry] {
+        [
+            Entry(title: .text("Linguistics & International communication:"), description: .text("Interpreteur of English")),
+            Entry(title: .text("Economy & Business management:"), description: .text("Financial manager")),
+            Entry(title: .text("Flight crew training:"), description: .text("Radio Operator"))
+        ]
+    }
+    
 }
 
 enum InfoType {

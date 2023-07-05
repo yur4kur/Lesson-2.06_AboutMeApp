@@ -11,7 +11,7 @@ class EducationViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //view.addVerticalGradientLayer(topColor: .white, bottomColor: .systemMint)
+        view.addVerticalGradientLayer(topColor: .white, bottomColor: .systemIndigo)
     }
 }
 
@@ -21,8 +21,8 @@ extension UIView {
         gradient.frame = bounds
         gradient.colors = [topColor.cgColor, bottomColor.cgColor]
         gradient.locations = [0.0, 1.0]
-        gradient.startPoint = CGPoint(x: 0, y: 0.5)
-        gradient.endPoint = CGPoint(x: 0, y: 1)
+        gradient.startPoint = CGPoint(x: 0, y: 0)
+        gradient.endPoint = CGPoint(x: 0, y: 0.5)
         layer.insertSublayer(gradient, at: 0)
     }
 }
