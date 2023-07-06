@@ -10,18 +10,49 @@ struct Entry {
     
     static func getPersonalData() -> [Entry] {
         [
-            Entry(title: .text("Age:"), description: .number(39)),
-            Entry(title: .text("City:"), description: .text("Ulyanovsk")),
-            Entry(title: .text("Flow:"), description: .number(36)),
-            Entry(title: .text("Learning pace:"), description: .text("Slow-to-Average"))
+            Entry(
+                title: .text("Age:"),
+                description: .number(39)
+            ),
+            Entry(
+                title: .text("City:"),
+                description: .text("Ulyanovsk")
+            ),
+            Entry(
+                title:
+                        .text("Flow:"),
+                description:
+                        .number(36)
+            ),
+            Entry(
+                title:
+                        .text("Learning pace:"),
+                description:
+                        .text("Slow-to-Average")
+            )
         ]
     }
     
     static func getEducationData() -> [Entry] {
         [
-            Entry(title: .text("Linguistics & International communication:"), description: .text("Interpreter of English")),
-            Entry(title: .text("Economy & Business management:"), description: .text("Finance manager")),
-            Entry(title: .text("Flight crew training:"), description: .text("Radio Operator"))
+            Entry(
+                title:
+                        .text("Linguistics & International communication:"),
+                description:
+                        .text("Interpreter of English")
+            ),
+            Entry(
+                title:
+                    .text("Economy & Business management:"),
+                  description:
+                    .text("Finance manager")
+            ),
+            Entry(
+                title:
+                        .text("Flight crew training:"),
+                description:
+                        .text("Radio Operator")
+            )
         ]
     }
     

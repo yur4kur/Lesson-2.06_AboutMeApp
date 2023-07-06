@@ -7,12 +7,16 @@
 
 import UIKit
 
-final class SwiftbookViewController: UIViewController {
+final class SwiftStudyViewController: UIViewController {
+    
+    // MARK: IBOutlets
     @IBOutlet var titleLabels: [UILabel]!
     @IBOutlet var dataLabels: [UILabel]!
     
+    // MARK: Private properties
     private let entries = Entry.getSwiftSelfLearning()
     
+    // MARK: Override methods
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addVerticalGradientLayer(topColor: .white, bottomColor: .systemIndigo)

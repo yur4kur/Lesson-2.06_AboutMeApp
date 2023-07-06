@@ -21,49 +21,68 @@ final class EducationViewController: UIViewController {
     @IBOutlet var secondaryDiplomaLabels: [UILabel]!
     @IBOutlet var ternaryDiplomaLabels: [UILabel]!
     
+    @IBOutlet var ternarySlider: UISlider!
+    @IBOutlet var secondarySlider: UISlider!
+    @IBOutlet var primarySlider: UISlider!
     @IBOutlet var alphaSliders: [UISlider]!
     
-    // MARK: Private property
+    // MARK: Private properties
     private let entry = Entry.getEducationData()
     
     // MARK: Override methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         view.addVerticalGradientLayer(topColor: .white, bottomColor: .systemIndigo)
         setupLabels(titleLabels, dataLabels, with: entry)
-    }
-    
-    // MARK: IBActions
-    @IBAction func resetSliders() {
+        
         titleLabels.forEach { $0.alpha = 0 }
         dataLabels.forEach { $0.alpha = 0 }
         alphaSliders.forEach { $0.value = 0 }
+        
         ulsuLogoImage.alpha = 0
         ulsuWhiteLogoImage.alpha = 0
         vdaLogoImage.alpha = 0
     }
     
+//    // MARK: IBActions
+//    private func resetSliders() {
+//        titleLabels.forEach { $0.alpha = 0 }
+//        dataLabels.forEach { $0.alpha = 0 }
+//        alphaSliders.forEach { $0.value = 0 }
+//
+//        ulsuLogoImage.alpha = 0
+//        ulsuWhiteLogoImage.alpha = 0
+//        vdaLogoImage.alpha = 0
+//    }
+    
     @IBAction func showEducationData(_ sender: UISlider) {
-        switch sender.tag {
-        case 0:
-            setAlpha(of: ulsuLogoImage, and: primaryDiplomaLabels, with: sender)
-        case 1:
-            setAlpha(of: ulsuWhiteLogoImage, and: secondaryDiplomaLabels, with: sender)
+        switch sender {
+        case primarySlider:
+            reset(ulsuWhiteLogoImage, secondaryDiplomaLabels, secondarySlider)
+            reset(vdaLogoImage, ternaryDiplomaLabels, ternarySlider)
+            changeAlpha(of: ulsuLogoImage, and: primaryDiplomaLabels, with: sender)
+        case secondarySlider:
+            reset(ulsuLogoImage, primaryDiplomaLabels, primarySlider)
+            reset(vdaLogoImage, ternaryDiplomaLabels, ternarySlider)
+            changeAlpha(of: ulsuWhiteLogoImage, and: secondaryDiplomaLabels, with: sender)
         default:
-            setAlpha(of: vdaLogoImage, and: ternaryDiplomaLabels, with: sender)
+            reset(ulsuLogoImage, primaryDiplomaLabels, primarySlider)
+            reset(ulsuWhiteLogoImage, secondaryDiplomaLabels, secondarySlider)
+            changeAlpha(of: vdaLogoImage, and: ternaryDiplomaLabels, with: sender)
         }
     }
     
     // MARK: Private methods
-//    private func cancelChanges() {
-//        titleLabels.forEach { $0.alpha = 0 }
-//        dataLabels.forEach { $0.alpha = 0 }
-//        alphaSliders.forEach { $0.value = 0 }
-//    }
-    
-    private func setAlpha(of image: UIImageView, and labels: [UILabel], with slider: UISlider) {
+    private func changeAlpha(of image: UIImageView, and labels: [UILabel], with slider: UISlider) {
         image.alpha = CGFloat(slider.value)
         labels.forEach { $0.alpha = CGFloat(slider.value) }
+    }
+    
+    private func reset(_ image: UIImageView, _ labels: [UILabel], _ slider: UISlider) {
+        image.alpha = 0
+        labels.forEach{ $0.alpha = 0 }
+        slider.value = 0
     }
 }
 
