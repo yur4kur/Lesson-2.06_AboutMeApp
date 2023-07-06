@@ -7,11 +7,12 @@
 
 import UIKit
 
-class EducationViewController: UIViewController {
+final class EducationViewController: UIViewController {
     
     // MARK: IBoutlets
     @IBOutlet var ulsuLogoImage: UIImageView!
     @IBOutlet var vdaLogoImage: UIImageView!
+    @IBOutlet var ulsuWhiteLogoImage: UIImageView!
     
     @IBOutlet var titleLabels: [UILabel]!
     @IBOutlet var dataLabels: [UILabel]!
@@ -38,6 +39,7 @@ class EducationViewController: UIViewController {
         dataLabels.forEach { $0.alpha = 0 }
         alphaSliders.forEach { $0.value = 0 }
         ulsuLogoImage.alpha = 0
+        ulsuWhiteLogoImage.alpha = 0
         vdaLogoImage.alpha = 0
     }
     
@@ -46,7 +48,7 @@ class EducationViewController: UIViewController {
         case 0:
             setAlpha(of: ulsuLogoImage, and: primaryDiplomaLabels, with: sender)
         case 1:
-            setAlpha(of: ulsuLogoImage, and: secondaryDiplomaLabels, with: sender)
+            setAlpha(of: ulsuWhiteLogoImage, and: secondaryDiplomaLabels, with: sender)
         default:
             setAlpha(of: vdaLogoImage, and: ternaryDiplomaLabels, with: sender)
         }

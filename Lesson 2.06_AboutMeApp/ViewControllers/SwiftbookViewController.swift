@@ -7,10 +7,15 @@
 
 import UIKit
 
-class SwiftbookViewController: UIViewController {
-
+final class SwiftbookViewController: UIViewController {
+    @IBOutlet var titleLabels: [UILabel]!
+    @IBOutlet var dataLabels: [UILabel]!
+    
+    private let entries = Entry.getSwiftSelfLearning()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addVerticalGradientLayer(topColor: .white, bottomColor: .systemIndigo)
+        setupLabels(titleLabels, dataLabels, with: entries)
     }
 }
