@@ -69,36 +69,77 @@ struct Entry {
                 description:
                         .text(
                             "Swift Playgrounds, iPad app"
-                        )),
+                        )
+            ),
             Entry(
                 title:
                         .period(
                             startMonth: "May",
                             startYear: 2022,
                             endMonth: "June",
-                            endYear: 2022),
+                            endYear: 2022
+                        ),
                 description:
                         .text(
                             "\"Swift for complete beginners\" by Paul Hudson, free course"
-                        )),
+                        )
+            ),
             Entry(
                 title:
-                    .period(startMonth: "July", startYear: 2022, endMonth: "August", endYear: 2022),
+                    .period(
+                        startMonth: "July",
+                        startYear: 2022,
+                        endMonth: "August",
+                        endYear: 2022
+                    ),
                   description:
                     .text(
                         "\"SwiftUI basics\" by Ian Solomein, free course, unfinished"
-                    )),
+                    )
+            ),
             Entry(
                 title:
                     .period(
                         startMonth: "September",
                         startYear: 2022,
                         endMonth: "February",
-                        endYear: 2023),
+                        endYear: 2023
+                    ),
                   description:
                     .text(
                         "\"2019 Summer Swift course\" by Viacheslav Bilyi, free videos"
-                    ))
+                    )
+            )
+        ]
+    }
+    
+    static func getCareerData() -> [Entry] {
+        [
+            Entry(
+                title:
+                    .years(
+                        startYear: 2003,
+                        endYear: 2009),
+                  description:
+                    .image("Interpreter")
+            ),
+            Entry(
+                title:
+                        .years(
+                    startYear: 2009,
+                    endYear: 2012
+                ),
+                description:
+                        .image("Accountant")
+            ),
+            Entry(
+                title:
+                        .years(
+                            startYear: 2013,
+                            endYear: 2023
+                        ),
+                description:
+                        .image("RadioOps"))
         ]
     }
 }
@@ -113,6 +154,10 @@ enum InfoType {
         endMonth: String,
         endYear: Int
     )
+    case years(
+        startYear: Int,
+        endYear: Int
+    )
 
     var entry: String {
         switch self {
@@ -124,6 +169,8 @@ enum InfoType {
             return String(number)
         case let .period(startMonth, startYear, endMonth, endYear):
             return "\(startMonth), \(startYear) - \(endMonth), \(endYear):"
+        case let .years(startYear, endYear):
+            return "\(startYear) - \(endYear)"
         }
     }
 }

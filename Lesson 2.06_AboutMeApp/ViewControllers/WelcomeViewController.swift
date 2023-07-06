@@ -19,5 +19,6 @@ final class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         welcomeLabel.text = "Welcome, " + String(describing: name ?? "User") + "!"
+        //tabBarController?.tabBar.alpha = 0
     }
 }

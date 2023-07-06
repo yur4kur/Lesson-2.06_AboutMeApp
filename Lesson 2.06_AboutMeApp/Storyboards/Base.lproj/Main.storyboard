@@ -675,24 +675,70 @@
                                         <integer key="value" value="8"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="showCareerData" destination="4Vh-6A-qcV" eventType="touchUpInside" id="0Dz-p0-jDB"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="2009 - 2012" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j1h-iZ-SP5">
+                                <rect key="frame" x="16" y="427" width="288" height="24"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="2013 - 2023" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qT9-KH-V8r">
+                                <rect key="frame" x="16" y="427" width="288" height="24"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Yqh-Dy-XSB">
+                                <rect key="frame" x="16" y="20" width="288" height="400"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yvq-zq-Ohn">
+                                <rect key="frame" x="16" y="20" width="288" height="400"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="94U-Zg-BND"/>
                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
                         <constraints>
+                            <constraint firstItem="Yqh-Dy-XSB" firstAttribute="leading" secondItem="94U-Zg-BND" secondAttribute="leading" constant="16" id="0ev-PZ-rr8"/>
                             <constraint firstItem="XQP-Dh-Nvx" firstAttribute="top" secondItem="F63-5E-nzh" secondAttribute="bottom" priority="750" constant="12" id="0we-vY-bEy"/>
+                            <constraint firstItem="94U-Zg-BND" firstAttribute="trailing" secondItem="Yqh-Dy-XSB" secondAttribute="trailing" constant="16" id="2MZ-BD-fYz"/>
                             <constraint firstItem="F63-5E-nzh" firstAttribute="height" secondItem="jva-EQ-Jfj" secondAttribute="height" multiplier="0.704225" id="3h7-oW-ijL"/>
+                            <constraint firstItem="j1h-iZ-SP5" firstAttribute="top" secondItem="yvq-zq-Ohn" secondAttribute="bottom" priority="750" constant="12" id="6Yp-5v-W3g"/>
                             <constraint firstItem="kzq-8q-Cqy" firstAttribute="top" relation="greaterThanOrEqual" secondItem="XQP-Dh-Nvx" secondAttribute="bottom" constant="16" id="9Ng-QQ-I8n"/>
+                            <constraint firstItem="94U-Zg-BND" firstAttribute="trailing" secondItem="qT9-KH-V8r" secondAttribute="trailing" constant="16" id="FpA-O5-ZPl"/>
+                            <constraint firstAttribute="trailing" secondItem="yvq-zq-Ohn" secondAttribute="trailing" constant="16" id="G9L-tG-dkY"/>
+                            <constraint firstItem="kzq-8q-Cqy" firstAttribute="top" relation="greaterThanOrEqual" secondItem="qT9-KH-V8r" secondAttribute="bottom" constant="16" id="ImN-Ph-bT5"/>
                             <constraint firstItem="94U-Zg-BND" firstAttribute="trailing" secondItem="XQP-Dh-Nvx" secondAttribute="trailing" constant="16" id="Tks-xJ-8Fm"/>
                             <constraint firstItem="kzq-8q-Cqy" firstAttribute="centerX" secondItem="jva-EQ-Jfj" secondAttribute="centerX" id="UVh-NB-H20"/>
+                            <constraint firstItem="Yqh-Dy-XSB" firstAttribute="height" secondItem="jva-EQ-Jfj" secondAttribute="height" multiplier="0.704225" id="ZiQ-Ix-IIY"/>
+                            <constraint firstItem="Yqh-Dy-XSB" firstAttribute="top" secondItem="94U-Zg-BND" secondAttribute="top" constant="20" id="aNH-Ke-VXz"/>
                             <constraint firstItem="94U-Zg-BND" firstAttribute="trailing" secondItem="F63-5E-nzh" secondAttribute="trailing" constant="16" id="cwi-DB-H7n"/>
+                            <constraint firstItem="94U-Zg-BND" firstAttribute="trailing" secondItem="j1h-iZ-SP5" secondAttribute="trailing" constant="16" id="gMc-la-HCZ"/>
+                            <constraint firstItem="qT9-KH-V8r" firstAttribute="top" secondItem="Yqh-Dy-XSB" secondAttribute="bottom" priority="750" constant="12" id="hl3-Lc-rpw"/>
+                            <constraint firstItem="j1h-iZ-SP5" firstAttribute="leading" secondItem="94U-Zg-BND" secondAttribute="leading" constant="16" id="jdW-SI-QhD"/>
+                            <constraint firstItem="yvq-zq-Ohn" firstAttribute="top" secondItem="94U-Zg-BND" secondAttribute="top" constant="20" id="kP0-yM-Bkg"/>
                             <constraint firstItem="94U-Zg-BND" firstAttribute="bottom" secondItem="kzq-8q-Cqy" secondAttribute="bottom" constant="16" id="lLt-c7-eRz"/>
                             <constraint firstItem="F63-5E-nzh" firstAttribute="leading" secondItem="94U-Zg-BND" secondAttribute="leading" constant="16" id="mPu-B4-2Mw"/>
+                            <constraint firstItem="qT9-KH-V8r" firstAttribute="leading" secondItem="94U-Zg-BND" secondAttribute="leading" constant="16" id="o3F-w8-8bB"/>
+                            <constraint firstItem="yvq-zq-Ohn" firstAttribute="height" secondItem="jva-EQ-Jfj" secondAttribute="height" multiplier="0.704225" id="o8n-df-sBG"/>
+                            <constraint firstItem="yvq-zq-Ohn" firstAttribute="leading" secondItem="94U-Zg-BND" secondAttribute="leading" constant="16" id="qyJ-cp-47b"/>
+                            <constraint firstItem="kzq-8q-Cqy" firstAttribute="top" relation="greaterThanOrEqual" secondItem="j1h-iZ-SP5" secondAttribute="bottom" constant="16" id="sVu-ep-TNW"/>
                             <constraint firstItem="XQP-Dh-Nvx" firstAttribute="leading" secondItem="94U-Zg-BND" secondAttribute="leading" constant="16" id="vOb-im-dP8"/>
                             <constraint firstItem="F63-5E-nzh" firstAttribute="top" secondItem="94U-Zg-BND" secondAttribute="top" constant="20" id="x8X-0G-BQL"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Career" image="tray.full" catalog="system" id="D6P-9O-773"/>
+                    <connections>
+                        <outlet property="showButton" destination="kzq-8q-Cqy" id="mMZ-gl-TSN"/>
+                        <outletCollection property="careerImageViews" destination="F63-5E-nzh" collectionClass="NSMutableArray" id="STg-AH-SHB"/>
+                        <outletCollection property="careerImageViews" destination="yvq-zq-Ohn" collectionClass="NSMutableArray" id="ces-ZF-W7J"/>
+                        <outletCollection property="careerImageViews" destination="Yqh-Dy-XSB" collectionClass="NSMutableArray" id="r17-Bd-gYP"/>
+                        <outletCollection property="yearsLabels" destination="XQP-Dh-Nvx" collectionClass="NSMutableArray" id="lEe-yL-b7a"/>
+                        <outletCollection property="yearsLabels" destination="j1h-iZ-SP5" collectionClass="NSMutableArray" id="n4g-nu-pHX"/>
+                        <outletCollection property="yearsLabels" destination="qT9-KH-V8r" collectionClass="NSMutableArray" id="ddm-GR-cpw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lhw-5m-ddD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

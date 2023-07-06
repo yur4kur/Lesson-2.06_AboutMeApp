@@ -27,14 +27,14 @@ final class EducationViewController: UIViewController {
     @IBOutlet var alphaSliders: [UISlider]!
     
     // MARK: Private properties
-    private let entry = Entry.getEducationData()
+    private let educationEntries = Entry.getEducationData()
     
     // MARK: Override methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.addVerticalGradientLayer(topColor: .white, bottomColor: .systemIndigo)
-        setupLabels(titleLabels, dataLabels, with: entry)
+        setupLabels(titleLabels, dataLabels, with: educationEntries)
         
         titleLabels.forEach { $0.alpha = 0 }
         dataLabels.forEach { $0.alpha = 0 }
