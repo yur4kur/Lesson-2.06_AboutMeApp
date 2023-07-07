@@ -48,7 +48,7 @@ let educationInfo = [
     ),
     Entry(
         title:
-                .text("Flight crew training: \nAN-124 Radio Operator"),
+                .text("Flight crew training: \n\nAN-124 Radio Operator"),
         description:
                 .image("VDA")
     )

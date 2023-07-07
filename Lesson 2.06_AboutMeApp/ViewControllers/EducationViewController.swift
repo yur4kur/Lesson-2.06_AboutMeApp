@@ -25,7 +25,10 @@ final class EducationViewController: UIViewController {
         super.viewDidLoad()
         view.addVerticalGradientLayer(topColor: .white, bottomColor: .systemIndigo)
         setupImagesAndLabels(logoImageViews, titleLabels, with: educationEntries)
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         logoImageViews.forEach { $0.alpha = 0 }
         titleLabels.forEach { $0.alpha = 0 }
         alphaSliders.forEach { $0.value = 0 }
