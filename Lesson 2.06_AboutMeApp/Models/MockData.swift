@@ -6,7 +6,7 @@
 //
 
 // MARK: User: YuriK
-let user = User(login: "YuriK", password: "airman", name: "Yuri Kurinnoi", photo: "Personal", background: [personalInfo, educationInfo, swiftLearningInfo, careerInfo])
+let user = User(login: "Jane", password: "master", name: "Yuri Kurinnoi", photo: "Personal", background: [personalInfo, educationInfo, swiftLearningInfo, careerInfo])
 
 // MARK: Personal Info
 let personalInfo = [
