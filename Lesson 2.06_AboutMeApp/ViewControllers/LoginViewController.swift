@@ -8,14 +8,10 @@
 import UIKit
 
 final class LoginViewController: UIViewController {
-
+    
     // MARK: IBOutlets
     @IBOutlet var loginTextfield: UITextField!
     @IBOutlet var passwordTextfield: UITextField!
-    
-//    // MARK: Private properties
-//    private let login = "Jane"
-//    private let password = "master"
     
     // MARK: Override methods
     override func viewDidLoad() {
@@ -44,7 +40,6 @@ final class LoginViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let tabBarVC = segue.destination as? UITabBarController else { return }
         guard let welcomeVC = tabBarVC.viewControllers?.first as? WelcomeViewController else { return }
-                //segue.destination as? WelcomeViewController else { return }
         welcomeVC.name = user.login
     }
     
@@ -63,7 +58,7 @@ final class LoginViewController: UIViewController {
     }
 }
 
-    // MARK: Extensions
+// MARK: Extensions
 extension LoginViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == loginTextfield {

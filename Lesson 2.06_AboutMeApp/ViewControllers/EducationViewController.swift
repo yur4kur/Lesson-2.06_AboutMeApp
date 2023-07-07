@@ -10,12 +10,9 @@ import UIKit
 final class EducationViewController: UIViewController {
     
     // MARK: IBoutlets
-    
     @IBOutlet var logoImageViews: [UIImageView]!
-    
     @IBOutlet var titleLabels: [UILabel]!
     
-    @IBOutlet var ternarySlider: UISlider!
     @IBOutlet var secondarySlider: UISlider!
     @IBOutlet var primarySlider: UISlider!
     @IBOutlet var alphaSliders: [UISlider]!
@@ -26,7 +23,6 @@ final class EducationViewController: UIViewController {
     // MARK: Override methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         view.addVerticalGradientLayer(topColor: .white, bottomColor: .systemIndigo)
         setupImagesAndLabels(logoImageViews, titleLabels, with: educationEntries)
         
@@ -35,16 +31,17 @@ final class EducationViewController: UIViewController {
         alphaSliders.forEach { $0.value = 0 }
     }
     
+    // MARK: IBActions
     @IBAction func showEducationData(_ sender: UISlider) {
         switch sender {
         case primarySlider:
-            reset(logoImageViews, titleLabels, alphaSliders, 1, 2)
+            reset(logoImageViews, titleLabels, alphaSliders, firstIndex: 1, secondtIndex: 2)
             changeAlpha(of: logoImageViews, and: titleLabels, subcriptIndex: 0, with: sender)
         case secondarySlider:
-            reset(logoImageViews, titleLabels, alphaSliders, 0, 2)
+            reset(logoImageViews, titleLabels, alphaSliders, firstIndex: 0, secondtIndex: 2)
             changeAlpha(of: logoImageViews, and: titleLabels, subcriptIndex: 1 ,with: sender)
         default:
-            reset(logoImageViews, titleLabels, alphaSliders, 0, 1)
+            reset(logoImageViews, titleLabels, alphaSliders, firstIndex: 0, secondtIndex: 1)
             changeAlpha(of: logoImageViews, and: titleLabels, subcriptIndex: 2,with: sender)
         }
     }
@@ -57,15 +54,15 @@ final class EducationViewController: UIViewController {
         with slider: UISlider
     ) {
         image[subcriptIndex].alpha = CGFloat(slider.value)
-        label[subcriptIndex].alpha = CGFloat(slider.value) }
+        label[subcriptIndex].alpha = CGFloat(slider.value)
     }
     
     private func reset(
         _ image: [UIImageView],
         _ labels: [UILabel],
         _ sliders: [UISlider],
-        _ firstIndex: Int,
-        _ secondtIndex: Int
+        firstIndex: Int,
+        secondtIndex: Int
     ) {
         image[firstIndex].alpha = 0
         image[secondtIndex].alpha = 0
@@ -73,6 +70,9 @@ final class EducationViewController: UIViewController {
         labels[secondtIndex].alpha = 0
         sliders[firstIndex].value = 0
         sliders[secondtIndex].value = 0
+    }
 }
+
+
 
 

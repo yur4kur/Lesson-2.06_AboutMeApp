@@ -567,7 +567,6 @@
                     <connections>
                         <outlet property="primarySlider" destination="BYS-Xg-RXs" id="vvo-PW-cAC"/>
                         <outlet property="secondarySlider" destination="qAM-8L-hZC" id="Zh1-Mp-x9R"/>
-                        <outlet property="ternarySlider" destination="SJl-gU-312" id="4So-Ek-SVP"/>
                         <outletCollection property="alphaSliders" destination="BYS-Xg-RXs" collectionClass="NSMutableArray" id="fJ6-PH-ceH"/>
                         <outletCollection property="alphaSliders" destination="qAM-8L-hZC" collectionClass="NSMutableArray" id="ofe-Tk-FvU"/>
                         <outletCollection property="alphaSliders" destination="SJl-gU-312" collectionClass="NSMutableArray" id="3kT-pt-4fh"/>

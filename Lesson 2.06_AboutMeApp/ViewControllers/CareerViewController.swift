@@ -33,7 +33,7 @@ final class CareerViewController: UIViewController {
         showButton.setTitle("Show", for: .normal)
     }
     
-   // MARK: IBActions
+    // MARK: IBActions
     @IBAction func showCareerData() {
         if showButton.currentTitle == "Show" {
             showButton.setTitle("Next", for: .normal)
@@ -43,7 +43,7 @@ final class CareerViewController: UIViewController {
         careerImageViews.first?.isHidden = false
         let reorderedImage = careerImageViews.removeFirst()
         careerImageViews.append(reorderedImage)
-
+        
         yearsLabels.last?.isHidden = true
         yearsLabels.first?.isHidden = false
         let reoderedLabel = yearsLabels.removeFirst()

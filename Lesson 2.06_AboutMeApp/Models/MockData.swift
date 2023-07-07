@@ -5,7 +5,7 @@
 //  Created by Юрий Куринной on 07.07.2023.
 //
 
-// MARK: User: YuriK
+// MARK: User instance
 let user = User(login: "Jane", password: "master", name: "Yuri Kurinnoi", photo: "Personal", background: [personalInfo, educationInfo, swiftLearningInfo, careerInfo])
 
 // MARK: Personal Info
@@ -48,7 +48,7 @@ let educationInfo = [
     ),
     Entry(
         title:
-                .text("Flight crew training: \nRadio Operator"),
+                .text("Flight crew training: \nAN-124 Radio Operator"),
         description:
                 .image("VDA")
     )

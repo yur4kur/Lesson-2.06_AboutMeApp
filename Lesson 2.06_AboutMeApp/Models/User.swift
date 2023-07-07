@@ -3,6 +3,7 @@
 //  Lesson 2.06_AboutMeApp
 //
 //  Created by Юрий Куринной on 04.07.2023.
+//
 
 struct User {
     let login: String
@@ -20,7 +21,7 @@ struct User {
     static func getEducationData() -> [Entry] {
         educationInfo
     }
-
+    
     static func getSwiftSelfLearning() -> [Entry] {
         swiftLearningInfo
     }

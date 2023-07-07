@@ -8,7 +8,7 @@
 import UIKit
 
 final class WelcomeViewController: UIViewController {
-
+    
     // MARK: IBOutlets
     @IBOutlet var welcomeLabel: UILabel!
     
@@ -19,6 +19,5 @@ final class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         welcomeLabel.text = "Welcome, " + String(describing: name ?? "User") + "!"
-        //tabBarController?.tabBar.alpha = 0
     }
 }
