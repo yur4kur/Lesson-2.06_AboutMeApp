@@ -30,17 +30,17 @@ final class LoginViewController: UIViewController {
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-//        if !loginTextfield.hasText || !passwordTextfield.hasText {
-//            showAlert(title: "Something is missing!", message: "Check your login or password")
-//            return false
-//        } else if loginTextfield.text == login && passwordTextfield.text == password {
-//            return true
-//        } else {
-//            showAlert(title: "Ooops!", message: "Error in login or password", textField: passwordTextfield)
-//            return false
-//        }
-        return true
+        if !loginTextfield.hasText || !passwordTextfield.hasText {
+            showAlert(title: "Something is missing!", message: "Check your login or password")
+            return false
+        } else if loginTextfield.text == user.login && passwordTextfield.text == user.password {
+            return true
+        } else {
+            showAlert(title: "Ooops!", message: "Error in login or password", textField: passwordTextfield)
+            return false
+        }
     }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
@@ -49,11 +49,11 @@ final class LoginViewController: UIViewController {
     
     // MARK: IBActions
     @IBAction func forgotLoginButtonDidTap() {
-        showAlert(title: "Really?", message: "Your login is \(login)")
+        showAlert(title: "Really?", message: "Your login is \(user.login)")
     }
     
     @IBAction func forgotPasswordButtonDidTap() {
-        showAlert(title: "Really?", message: "Your password is \(password)")
+        showAlert(title: "Really?", message: "Your password is \(user.password)")
     }
     
     @IBAction func unwindAction(for unwindSegue: UIStoryboardSegue) {

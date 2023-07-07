@@ -4,10 +4,12 @@
 //
 //  Created by Юрий Куринной on 04.07.2023.
 
-// MARK: Entry model
-struct Entry {
-    let title: InfoType
-    let description: InfoType
+struct User {
+    let login: String
+    let password: String
+    let name: String
+    let photo: String
+    let background: [[Entry]]
     
     // MARK: Personal info method
     static func getPersonalData() -> [Entry] {
@@ -27,6 +29,12 @@ struct Entry {
     static func getCareerData() -> [Entry] {
         careerInfo
     }
+}
+
+// MARK: Entry model
+struct Entry {
+    let title: InfoType
+    let description: InfoType
 }
 
 // MARK: InfoType model

@@ -290,7 +290,8 @@
                     <tabBarItem key="tabBarItem" title="Personal info" image="filemenu.and.selection" catalog="system" id="Vg8-LU-3MN"/>
                     <navigationItem key="navigationItem" id="e4I-bW-zJG"/>
                     <connections>
-                        <outlet property="personalImage" destination="4ca-2X-EeJ" id="eEJ-5J-aP7"/>
+                        <outlet property="nameLabel" destination="cI4-d9-hld" id="g2F-fm-bdG"/>
+                        <outlet property="personalImageView" destination="4ca-2X-EeJ" id="eEJ-5J-aP7"/>
                         <outletCollection property="titleLabels" destination="37A-8e-tlx" collectionClass="NSMutableArray" id="LML-Tk-QoL"/>
                         <outletCollection property="titleLabels" destination="ujC-u7-YEm" collectionClass="NSMutableArray" id="Wle-Tl-ew5"/>
                         <outletCollection property="titleLabels" destination="ra9-Nb-H5J" collectionClass="NSMutableArray" id="bkj-CM-hfp"/>

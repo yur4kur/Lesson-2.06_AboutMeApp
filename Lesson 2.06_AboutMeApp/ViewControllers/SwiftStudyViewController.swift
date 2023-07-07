@@ -14,7 +14,7 @@ final class SwiftStudyViewController: UIViewController {
     @IBOutlet var dataLabels: [UILabel]!
     
     // MARK: Private properties
-    private let swiftEntries = Entry.getSwiftSelfLearning()
+    private let swiftEntries = user.background[2]
     
     // MARK: Override methods
     override func viewDidLoad() {

@@ -10,22 +10,25 @@ import UIKit
 final class PersonalViewController: UIViewController {
     
     // MARK: IBOutlets
-    @IBOutlet var personalImage: UIImageView!
+    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var personalImageView: UIImageView!
     
     @IBOutlet var titleLabels: [UILabel]!
     @IBOutlet var dataLabels: [UILabel]!
     
     // MARK: Private properties
-    private let personalEntries = Entry.getPersonalData()
+    private let personalEntries = user.background[0]
     
     // MARK: Override methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        nameLabel.text = user.name
+        personalImageView.image = UIImage(named: user.photo)
         setupLabels(titleLabels, dataLabels, with: personalEntries)
     }
     
     override func viewDidLayoutSubviews() {
-        personalImage.layer.cornerRadius = personalImage.frame.width / 2
+        personalImageView.layer.cornerRadius = personalImageView.frame.width / 2
     }
 }
 
