@@ -10,16 +10,10 @@ import UIKit
 final class EducationViewController: UIViewController {
     
     // MARK: IBoutlets
-    @IBOutlet var ulsuLogoImage: UIImageView!
-    @IBOutlet var vdaLogoImage: UIImageView!
-    @IBOutlet var ulsuWhiteLogoImage: UIImageView!
+    
+    @IBOutlet var logoImageViews: [UIImageView]!
     
     @IBOutlet var titleLabels: [UILabel]!
-    @IBOutlet var dataLabels: [UILabel]!
-    
-    @IBOutlet var primaryDiplomaLabels: [UILabel]!
-    @IBOutlet var secondaryDiplomaLabels: [UILabel]!
-    @IBOutlet var ternaryDiplomaLabels: [UILabel]!
     
     @IBOutlet var ternarySlider: UISlider!
     @IBOutlet var secondarySlider: UISlider!
@@ -34,56 +28,51 @@ final class EducationViewController: UIViewController {
         super.viewDidLoad()
         
         view.addVerticalGradientLayer(topColor: .white, bottomColor: .systemIndigo)
-        setupLabels(titleLabels, dataLabels, with: educationEntries)
+        setupImagesAndLabels(logoImageViews, titleLabels, with: educationEntries)
         
+        logoImageViews.forEach { $0.alpha = 0 }
         titleLabels.forEach { $0.alpha = 0 }
-        dataLabels.forEach { $0.alpha = 0 }
         alphaSliders.forEach { $0.value = 0 }
-        
-        ulsuLogoImage.alpha = 0
-        ulsuWhiteLogoImage.alpha = 0
-        vdaLogoImage.alpha = 0
     }
-    
-//    // MARK: IBActions
-//    private func resetSliders() {
-//        titleLabels.forEach { $0.alpha = 0 }
-//        dataLabels.forEach { $0.alpha = 0 }
-//        alphaSliders.forEach { $0.value = 0 }
-//
-//        ulsuLogoImage.alpha = 0
-//        ulsuWhiteLogoImage.alpha = 0
-//        vdaLogoImage.alpha = 0
-//    }
     
     @IBAction func showEducationData(_ sender: UISlider) {
         switch sender {
         case primarySlider:
-            reset(ulsuWhiteLogoImage, secondaryDiplomaLabels, secondarySlider)
-            reset(vdaLogoImage, ternaryDiplomaLabels, ternarySlider)
-            changeAlpha(of: ulsuLogoImage, and: primaryDiplomaLabels, with: sender)
+            reset(logoImageViews, titleLabels, alphaSliders, 1, 2)
+            changeAlpha(of: logoImageViews, and: titleLabels, subcriptIndex: 0, with: sender)
         case secondarySlider:
-            reset(ulsuLogoImage, primaryDiplomaLabels, primarySlider)
-            reset(vdaLogoImage, ternaryDiplomaLabels, ternarySlider)
-            changeAlpha(of: ulsuWhiteLogoImage, and: secondaryDiplomaLabels, with: sender)
+            reset(logoImageViews, titleLabels, alphaSliders, 0, 2)
+            changeAlpha(of: logoImageViews, and: titleLabels, subcriptIndex: 1 ,with: sender)
         default:
-            reset(ulsuLogoImage, primaryDiplomaLabels, primarySlider)
-            reset(ulsuWhiteLogoImage, secondaryDiplomaLabels, secondarySlider)
-            changeAlpha(of: vdaLogoImage, and: ternaryDiplomaLabels, with: sender)
+            reset(logoImageViews, titleLabels, alphaSliders, 0, 1)
+            changeAlpha(of: logoImageViews, and: titleLabels, subcriptIndex: 2,with: sender)
         }
     }
     
     // MARK: Private methods
-    private func changeAlpha(of image: UIImageView, and labels: [UILabel], with slider: UISlider) {
-        image.alpha = CGFloat(slider.value)
-        labels.forEach { $0.alpha = CGFloat(slider.value) }
+    private func changeAlpha(
+        of image: [UIImageView],
+        and label: [UILabel],
+        subcriptIndex: Int,
+        with slider: UISlider
+    ) {
+        image[subcriptIndex].alpha = CGFloat(slider.value)
+        label[subcriptIndex].alpha = CGFloat(slider.value) }
     }
     
-    private func reset(_ image: UIImageView, _ labels: [UILabel], _ slider: UISlider) {
-        image.alpha = 0
-        labels.forEach{ $0.alpha = 0 }
-        slider.value = 0
-    }
+    private func reset(
+        _ image: [UIImageView],
+        _ labels: [UILabel],
+        _ sliders: [UISlider],
+        _ firstIndex: Int,
+        _ secondtIndex: Int
+    ) {
+        image[firstIndex].alpha = 0
+        image[secondtIndex].alpha = 0
+        labels[firstIndex].alpha = 0
+        labels[secondtIndex].alpha = 0
+        sliders[firstIndex].value = 0
+        sliders[secondtIndex].value = 0
 }
 
 
