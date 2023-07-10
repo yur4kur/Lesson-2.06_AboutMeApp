@@ -15,7 +15,7 @@ final class CareerViewController: UIViewController {
     @IBOutlet var showButton: UIButton!
     
     // MARK: Private properties
-    var careerEntries: [Entry]!
+    var user: User!
     
     // MARK: Override methods
     override func viewDidLoad() {
@@ -25,7 +25,7 @@ final class CareerViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        setupImagesAndLabels(careerImageViews, yearsLabels, with: careerEntries)
+        setupImagesAndLabels(careerImageViews, yearsLabels, with: user.person.background[3])
         
         careerImageViews.forEach { $0.isHidden = true }
         yearsLabels.forEach { $0.isHidden = true }

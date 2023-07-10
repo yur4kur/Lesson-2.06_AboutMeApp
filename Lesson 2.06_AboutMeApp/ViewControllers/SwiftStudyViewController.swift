@@ -14,12 +14,12 @@ final class SwiftStudyViewController: UIViewController {
     @IBOutlet var dataLabels: [UILabel]!
     
     // MARK: Private properties
-    var swiftEntries: [Entry]!
+    var user: User!
     
     // MARK: Override methods
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addVerticalGradientLayer(topColor: .white, bottomColor: .systemIndigo)
-        setupLabels(titleLabels, dataLabels, with: swiftEntries)
+        setupLabels(titleLabels, dataLabels, with: user.person.background[2])
     }
 }

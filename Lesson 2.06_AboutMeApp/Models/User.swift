@@ -8,11 +8,25 @@
 struct User {
     let login: String
     let password: String
+    let masterName: String
+    let person: Person
+    
+    static func getUser () -> User {
+        User(
+            login: "Jane",
+            password: "master",
+            masterName: "Eugenia",
+            person: Person.getPerson()
+            )
+    }
+}
+// MARK: Person model
+struct Person {
     let name: String
     let photo: String
     let background: [[Entry]]
     
-    static func getUser () -> User {
+    static func getPerson () -> Person {
         
         let personalInfo = [
             Entry(
@@ -118,14 +132,12 @@ struct User {
                         .image("RadioOps"))
         ]
         
-        let user = User(
-            login: "Jane",
-            password: "master",
+        let person = Person(
             name: "Yuri Kurinnoi",
             photo: "Personal",
             background: [personalInfo, educationInfo, swiftLearningInfo, careerInfo])
         
-        return user
+        return person
     }
 }
 

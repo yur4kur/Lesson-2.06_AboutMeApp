@@ -11,22 +11,20 @@ final class PersonalViewController: UIViewController {
     
     // MARK: IBOutlets
     @IBOutlet var nameLabel: UILabel!
-    @IBOutlet var personalImageView: UIImageView!
+    @IBOutlet var personalImageView: UIImageView! 
     
     @IBOutlet var titleLabels: [UILabel]!
     @IBOutlet var dataLabels: [UILabel]!
     
     // MARK: Private properties
-    var name: String!
-    var image: String!
-    var personalEntries: [Entry]!
+    var user: User!
     
     // MARK: Override methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        nameLabel.text = name
-        personalImageView.image = UIImage(named: image)
-        setupLabels(titleLabels, dataLabels, with: personalEntries)
+        nameLabel.text = user.person.name
+        personalImageView.image = UIImage(named: user.person.photo)
+        setupLabels(titleLabels, dataLabels, with: user.person.background[0])
     }
     
     override func viewDidLayoutSubviews() {

@@ -43,21 +43,19 @@ final class LoginViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let tabBarVC = segue.destination as? UITabBarController else { return }
         
-        guard let welcomeVC = tabBarVC.viewControllers?.first as? WelcomeViewController else { return }
-        welcomeVC.name = user.login
-        
-        guard let personalVC = tabBarVC.viewControllers?[1] as? PersonalViewController else { return }
-        personalVC.name = user.name
-        personalVC.image = user.photo
-        personalVC.personalEntries = user.background[0]
-        
-        guard let navigationVC = tabBarVC.viewControllers?[2] as? UINavigationController else { return }
-        guard let educationVC = navigationVC.viewControllers.first as? EducationViewController else { return }
-        educationVC.educationEntries = user.background[1]
-        educationVC.swiftData = user.background[2]
-        
-        guard let careerVC = tabBarVC.viewControllers?[3] as? CareerViewController else { return }
-        careerVC.careerEntries = user.background[3]
+        tabBarVC.viewControllers?.forEach {
+            if let welcomeVC = $0 as? WelcomeViewController {
+                welcomeVC.user = user
+            } else if let personalVC = $0 as? PersonalViewController {
+                personalVC.user = user
+            } else if let navigationVC = $0 as? UINavigationController {
+                let educationVC = navigationVC.topViewController
+                guard let educationVC = educationVC as? EducationViewController else { return }
+                educationVC.user = user
+            } else if let careerVC = $0 as? CareerViewController {
+                careerVC.user = user
+            }
+        }
     }
     
     // MARK: IBActions

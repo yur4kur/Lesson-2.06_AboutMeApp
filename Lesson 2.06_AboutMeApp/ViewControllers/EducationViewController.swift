@@ -18,14 +18,14 @@ final class EducationViewController: UIViewController {
     @IBOutlet var alphaSliders: [UISlider]!
     
     // MARK: Private properties
-    var educationEntries: [Entry]!
-    var swiftData: [Entry]!
+    var user: User!
+    
     
     // MARK: Override methods
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addVerticalGradientLayer(topColor: .white, bottomColor: .systemIndigo)
-        setupImagesAndLabels(logoImageViews, titleLabels, with: educationEntries)
+        setupImagesAndLabels(logoImageViews, titleLabels, with: user.person.background[1])
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -37,7 +37,7 @@ final class EducationViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let swiftVC = segue.destination as? SwiftStudyViewController else { return }
-        swiftVC.swiftEntries = swiftData
+        swiftVC.user = user
     }
     
     // MARK: IBActions
