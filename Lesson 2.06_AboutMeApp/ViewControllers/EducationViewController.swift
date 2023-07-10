@@ -19,6 +19,7 @@ final class EducationViewController: UIViewController {
     
     // MARK: Private properties
     var educationEntries: [Entry]!
+    var swiftData: [Entry]!
     
     // MARK: Override methods
     override func viewDidLoad() {
@@ -32,6 +33,11 @@ final class EducationViewController: UIViewController {
         logoImageViews.forEach { $0.alpha = 0 }
         titleLabels.forEach { $0.alpha = 0 }
         alphaSliders.forEach { $0.value = 0 }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let swiftVC = segue.destination as? SwiftStudyViewController else { return }
+        swiftVC.swiftEntries = swiftData
     }
     
     // MARK: IBActions
