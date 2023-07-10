@@ -12,23 +12,120 @@ struct User {
     let photo: String
     let background: [[Entry]]
     
-    // MARK: Personal info method
-    static func getPersonalData() -> [Entry] {
-        personalInfo
-    }
-    
-    // MARK: Education info method
-    static func getEducationData() -> [Entry] {
-        educationInfo
-    }
-    
-    static func getSwiftSelfLearning() -> [Entry] {
-        swiftLearningInfo
-    }
-    
-    // MARK: Career info method
-    static func getCareerData() -> [Entry] {
-        careerInfo
+    static func getUser () -> User {
+        
+        let personalInfo = [
+            Entry(
+                title: .text("Age:"),
+                description: .number(39)),
+            Entry(
+                title: .text("City:"),
+                description: .text("Ulyanovsk")),
+            Entry(
+                title:
+                        .text("Flow:"),
+                description:
+                        .number(36)),
+            Entry(
+                title:
+                        .text("Learning pace:"),
+                description:
+                        .text("Slow-to-Average"))
+        ]
+        
+        let educationInfo = [
+            Entry(
+                title:
+                        .text("Linguistics & International communication: \nInterpreter of English"),
+                description:
+                        .image("ULSU")),
+            Entry(
+                title:
+                        .text("Economy & Business management: \nFinance manager"),
+                description:
+                        .image("ULSU")),
+            Entry(
+                title:
+                        .text("Flight crew training: \n\nAN-124 Radio Operator"),
+                description:
+                        .image("VDA"))
+        ]
+        
+        let swiftLearningInfo = [
+            Entry(
+                title:
+                        .period(
+                            startMonth: "April",
+                            startYear: 2022,
+                            endMonth: "May",
+                            endYear: 2022),
+                description:
+                        .text(
+                            "Swift Playgrounds, iPad app")),
+            Entry(
+                title:
+                        .period(
+                            startMonth: "May",
+                            startYear: 2022,
+                            endMonth: "June",
+                            endYear: 2022),
+                description:
+                        .text(
+                            "\"Swift for complete beginners\" by Paul Hudson, free Youtube course")),
+            Entry(
+                title:
+                        .period(
+                            startMonth: "July",
+                            startYear: 2022,
+                            endMonth: "August",
+                            endYear: 2022),
+                description:
+                        .text(
+                            "\"SwiftUI basics\" by Ian Solomein, free Youtube course, unfinished")),
+            Entry(
+                title:
+                        .period(
+                            startMonth: "September",
+                            startYear: 2022,
+                            endMonth: "February",
+                            endYear: 2023),
+                description:
+                        .text(
+                            "\"2019 Summer Swift course\" by Viacheslav Bilyi, free Youtube videos"))
+        ]
+        
+        let careerInfo = [
+            Entry(
+                title:
+                        .years(
+                            startYear: 2003,
+                            endYear: 2009),
+                description:
+                        .image("Interpreter")),
+            Entry(
+                title:
+                        .years(
+                            startYear: 2009,
+                            endYear: 2012),
+                description:
+                        .image("Accountant")),
+            Entry(
+                title:
+                        .years(
+                            startYear: 2013,
+                            endYear: 2023),
+                description:
+                        .image("RadioOps"))
+        ]
+        
+        let user = User(
+            login: "Jane",
+            password: "master",
+            name: "Yuri Kurinnoi",
+            photo: "Personal",
+            background: [personalInfo, educationInfo, swiftLearningInfo, careerInfo])
+        
+        return user
     }
 }
 
@@ -47,12 +144,10 @@ enum InfoType {
         startMonth: String,
         startYear: Int,
         endMonth: String,
-        endYear: Int
-    )
+        endYear: Int)
     case years(
         startYear: Int,
-        endYear: Int
-    )
+        endYear: Int)
     
     var entry: String {
         switch self {

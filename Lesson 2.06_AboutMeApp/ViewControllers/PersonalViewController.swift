@@ -17,13 +17,15 @@ final class PersonalViewController: UIViewController {
     @IBOutlet var dataLabels: [UILabel]!
     
     // MARK: Private properties
-    private let personalEntries = user.background[0]
+    var name: String!
+    var image: String!
+    var personalEntries: [Entry]!
     
     // MARK: Override methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        nameLabel.text = user.name
-        personalImageView.image = UIImage(named: user.photo)
+        nameLabel.text = name
+        personalImageView.image = UIImage(named: image)
         setupLabels(titleLabels, dataLabels, with: personalEntries)
     }
     

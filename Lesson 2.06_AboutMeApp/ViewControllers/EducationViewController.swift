@@ -18,7 +18,7 @@ final class EducationViewController: UIViewController {
     @IBOutlet var alphaSliders: [UISlider]!
     
     // MARK: Private properties
-    private let educationEntries = user.background[1]
+    var educationEntries: [Entry]!
     
     // MARK: Override methods
     override func viewDidLoad() {

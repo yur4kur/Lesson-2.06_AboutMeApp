@@ -15,7 +15,7 @@ final class CareerViewController: UIViewController {
     @IBOutlet var showButton: UIButton!
     
     // MARK: Private properties
-    private let careerEntries = user.background[3]
+    var careerEntries: [Entry]!
     
     // MARK: Override methods
     override func viewDidLoad() {

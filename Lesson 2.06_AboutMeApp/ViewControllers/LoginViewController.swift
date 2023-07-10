@@ -13,6 +13,9 @@ final class LoginViewController: UIViewController {
     @IBOutlet var loginTextfield: UITextField!
     @IBOutlet var passwordTextfield: UITextField!
     
+    // MARK: Private properties
+    private let user = User.getUser()
+    
     // MARK: Override methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,8 +42,27 @@ final class LoginViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let tabBarVC = segue.destination as? UITabBarController else { return }
+        guard let navigationVC = tabBarVC.viewControllers?[2] as? UINavigationController else { return }
+        
         guard let welcomeVC = tabBarVC.viewControllers?.first as? WelcomeViewController else { return }
         welcomeVC.name = user.login
+        
+        guard let personalVC = tabBarVC.viewControllers?[1] as? PersonalViewController else { return }
+        personalVC.name = user.name
+        personalVC.image = user.photo
+        personalVC.personalEntries = user.background[0]
+        
+        guard let educationVC = navigationVC.viewControllers.first as? EducationViewController else { return }
+        educationVC.educationEntries = user.background[1]
+        print(navigationVC.children)
+        
+        navigationVC.
+//        guard let swiftVC = segue.destination as? SwiftStudyViewController else { return }
+        swiftVC.swiftEntries = user.background[2]
+        
+        
+        guard let careerVC = tabBarVC.viewControllers?[3] as? CareerViewController else { return }
+        careerVC.careerEntries = user.background[3]
     }
     
     // MARK: IBActions

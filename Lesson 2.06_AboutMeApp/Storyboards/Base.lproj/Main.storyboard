@@ -309,7 +309,7 @@
         <!--Swift Study View Controller-->
         <scene sceneID="YLI-DP-MWN">
             <objects>
-                <viewController id="voI-kZ-kwz" customClass="SwiftStudyViewController" customModule="Lesson_2_06_AboutMeApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SwiftController" id="voI-kZ-kwz" customClass="SwiftStudyViewController" customModule="Lesson_2_06_AboutMeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Q1y-7T-jQO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -599,7 +599,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PXd-uX-wRJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2520" y="10"/>
+            <point key="canvasLocation" x="2518" y="10"/>
         </scene>
         <!--Career-->
         <scene sceneID="URI-bd-R92">
